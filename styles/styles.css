@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-3 px-5 mt-5 bg-gradient-to-r from-blue-700 to-red-700 text-white text-3xl font-semibold rounded shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+
+:root {
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.hero-section {
+  background: rgb(0, 0, 0, 0.3) url("/img/hero-image.webp") no-repeat center;
+
+  background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/hero-image.webp") no-repeat center;
+  background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/hero-image.webp") no-repeat center;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/hero-image.webp") no-repeat center;
+  background-size: cover;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+.custom-shape-divider-top-1672532270 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1672532270 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 453px;
+}
+
+.custom-shape-divider-top-1672532270 .shape-fill {
+  fill: #fff;
+}
+
+.custom-shape-divider-bottom-1672532431 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1672532431 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 63px;
+}
+
+.custom-shape-divider-bottom-1672532431 .shape-fill {
+  fill: #ffffff;
+}
+
+.custom-shape-divider-top-1672533097 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1672533097 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.custom-shape-divider-top-1672533097 .shape-fill {
+  fill: #000000;
+}
