@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>عبر الحدود للسياحية | العالم بين يديك</title>
+    <title>عبر الحدود للسياحة | العالم بين يديك</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,34 +15,156 @@
     <link href="/dist/development.css" rel="stylesheet" />
 
     <script defer src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+    <script defer src="/scripts/index.js"></script>
   </head>
   <body>
     <!-- Header Starts Here -->
     <header
-      class="fixed top-0 left-0 right-0 z-10 flex justify-between px-[5%] select-none"
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-10 flex justify-between px-[5%] select-none transition-all duration-300 ease-in-out"
     >
       <a title="الرئيسية" href="#">
         <img class="max-w-[85px] my-4" src="/img/logo.webp" alt="logo" />
       </a>
 
-      <nav>
+      <!-- Desktop Navigation -->
+      <nav
+        aria-label="primary navigation"
+        id="desktop-navigation"
+        class="hidden md:block"
+      >
         <ui
           class="h-full list-none flex items-center gap-2 text-lg font-semibold"
         >
-          <li class="h-full flex items-center px-4 group hover:bg-white">
-            <a class="group-hover:text-black" href="#">الرئيسية</a>
+          <li
+            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+          >
+            <a href="#">الرئيسية</a>
           </li>
-          <li class="h-full flex items-center px-4 group hover:bg-white">
-            <a class="group-hover:text-black" href="#services">خدماتنا</a>
+          <li
+            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+          >
+            <a href="#services">خدماتنا</a>
           </li>
-          <li class="h-full flex items-center px-4 group hover:bg-white">
-            <a class="group-hover:text-black" href="#about">من نحن</a>
+          <li
+            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+          >
+            <a href="#about">من نحن</a>
           </li>
-          <li class="h-full flex items-center px-4 group hover:bg-white">
-            <a class="group-hover:text-black" href="#contacts">تواصل معنا</a>
+          <li
+            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+          >
+            <a href="#contacts">تواصل معنا</a>
           </li>
         </ui>
       </nav>
+
+      <!-- Mobile Navigation -->
+      <nav
+        aria-label="secondary navigation"
+        id="mobile-navigation"
+        class="absolute right-0 flex md:hidden flex-col items-end gap-5 px-4 py-10 w-60 h-screen bg-gradient-to-bl from-cyan-200 to-blue-500 text-black transition-all ease-in-out duration-200 translate-x-full shadow-lg"
+      >
+        <!-- Close Navbar Menu Button -->
+        <button id="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="w-[25px] h-[25px]"
+          >
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              fill="#b91c1c"
+              d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+            />
+          </svg>
+        </button>
+
+        <ui
+          class="w-full h-full list-none flex flex-col items-center gap-4 text-right text-lg font-semibold"
+        >
+          <li
+            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+          >
+            <a class="flex flex-row-reverse items-center gap-2" href="#"
+              >الرئيسية
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                class="w-7 h-7"
+              >
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+          >
+            <a class="flex flex-row-reverse items-center gap-2" href="#services"
+              >خدماتنا
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="w-7 h-7"
+              >
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 21 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"
+                /></svg
+            ></a>
+          </li>
+          <li
+            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+          >
+            <a class="flex flex-row-reverse items-center gap-2" href="#about"
+              >من نحن
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="w-7 h-7"
+              >
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM288 352c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z"
+                /></svg
+            ></a>
+          </li>
+          <li
+            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+          >
+            <a class="flex flex-row-reverse items-center gap-2" href="#contacts"
+              >تواصل معنا
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="w-7 h-7"
+              >
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"
+                /></svg
+            ></a>
+          </li>
+        </ui>
+      </nav>
+
+      <!-- Open Navbar Menu Button -->
+      <button id="open" class="block md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          class="w-[25px] h-[25px]"
+        >
+          <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            fill="white"
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </button>
     </header>
     <!-- Header End Here -->
 
@@ -568,7 +690,6 @@
     <!-- Main Ends Here -->
 
     <!-- Footer Starts Here -->
-
     <footer class="relative p-4 bg-blue-700 md:px-10 md:py-12">
       <div
         class="max-w-[1440px] flex items-center justify-between flex-wrap gap-4"
