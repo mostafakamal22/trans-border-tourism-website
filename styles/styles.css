@@ -23,7 +23,8 @@
 }
 
 .hero-section {
-  background: rgb(0, 0, 0, 0.3) url("/img/hero-image.webp") no-repeat center;
+  background: rgb(0, 0, 0, 0.3) url("/img/hero-image.webp") no-repeat fixed
+    center;
 
   background: -moz-linear-gradient(
       180deg,
@@ -44,6 +45,7 @@
     ),
     url("/img/hero-image.webp") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }

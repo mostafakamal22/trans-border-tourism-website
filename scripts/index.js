@@ -17,12 +17,12 @@ openBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   const yOffset = window.scrollY;
 
-  //If navbar at the top of the page.
+  //If navbar at the top of the page Remove The Black BG.
   if (!yOffset) {
     navbar.classList.remove("bg-black", "shadow-lg");
   }
 
-  //If we scroll add black background
+  //If we scroll Below the hero setion add Black BG.
   if (
     yOffset &&
     !navbar.classList.contains("bg-black", "shadow-lg") &&
