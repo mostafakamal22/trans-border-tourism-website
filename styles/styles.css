@@ -22,6 +22,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Hero Section BG Image */
 .hero-section {
   background: rgb(0, 0, 0, 0.3) url("/img/hero-image.webp") no-repeat fixed
     center;
@@ -50,6 +51,36 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
+/* Footer BG Images */
+footer {
+  background: rgb(0, 0, 0, 0.3) url("/img/sub-hero-image.webp") no-repeat fixed
+    center;
+
+  background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/sub-hero-image.webp") no-repeat center;
+  background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/sub-hero-image.webp") no-repeat center;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/img/sub-hero-image.webp") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+/* Section Dividers Styles */
 .custom-shape-divider-top-1672532270 {
   position: absolute;
   top: 0;
@@ -89,24 +120,4 @@
 
 .custom-shape-divider-bottom-1672532431 .shape-fill {
   fill: #ffffff;
-}
-
-.custom-shape-divider-top-1672533097 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1672533097 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px;
-}
-
-.custom-shape-divider-top-1672533097 .shape-fill {
-  fill: #000000;
 }

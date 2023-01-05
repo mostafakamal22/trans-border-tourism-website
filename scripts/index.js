@@ -19,15 +19,20 @@ window.addEventListener("scroll", () => {
 
   //If navbar at the top of the page Remove The Black BG.
   if (!yOffset) {
-    navbar.classList.remove("bg-black", "shadow-lg");
+    navbar.classList.remove("bg-zinc-800", "shadow-lg");
   }
 
   //If we scroll Below the hero setion add Black BG.
   if (
     yOffset &&
-    !navbar.classList.contains("bg-black", "shadow-lg") &&
+    !navbar.classList.contains("bg-zinc-800", "shadow-lg") &&
     yOffset >= window.outerHeight
   ) {
-    navbar.classList.add("bg-black", "shadow-lg");
+    navbar.classList.add("bg-zinc-800", "shadow-lg");
   }
 });
+
+//make event listeners passive to improve scrolling performance
+if ("ontouchstart" in document.documentElement) {
+  document.addEventListener("touchstart", onTouchStart, { passive: true });
+}
