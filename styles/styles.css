@@ -121,3 +121,8 @@ footer {
 .custom-shape-divider-bottom-1672532431 .shape-fill {
   fill: #ffffff;
 }
+
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
