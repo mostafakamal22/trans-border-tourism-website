@@ -4,6 +4,7 @@ const openBtn = document.getElementById("open");
 const mobileNav = document.getElementById("mobile-navigation");
 const navbar = document.getElementById("navbar");
 const serviceSection = document.getElementById("services");
+const navLinks = document.querySelectorAll(".nav-item");
 
 closeBtn.addEventListener("click", () => {
   mobileNav.classList.toggle("translate-x-full");
@@ -13,28 +14,23 @@ openBtn.addEventListener("click", () => {
   mobileNav.classList.toggle("translate-x-full");
 });
 
-//Handle Navbar Background Color Change While Scrolling.
-window.addEventListener(
-  "scroll",
-  () => {
-    const yOffset = window.scrollY;
+//Handle Closing Navbar When Clicking Outside Of Navmenu
+document.addEventListener("click", (e) => {
+  if (
+    !mobileNav.contains(e.target) &&
+    !openBtn.contains(e.target) &&
+    !mobileNav.classList.contains("translate-x-full")
+  ) {
+    mobileNav.classList.toggle("translate-x-full");
+  }
+});
 
-    //If navbar at the top of the page Remove The Black BG.
-    if (!yOffset) {
-      navbar.classList.remove("bg-zinc-800", "shadow-lg");
-    }
-
-    //If we scroll Below the hero setion add Black BG.
-    if (
-      yOffset &&
-      !navbar.classList.contains("bg-zinc-800", "shadow-lg") &&
-      yOffset >= window.outerHeight
-    ) {
-      navbar.classList.add("bg-zinc-800", "shadow-lg");
-    }
-  },
-  { passive: true }
-);
+//Handle Closing Navbar When Clicking NavLinks.
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileNav.classList.toggle("translate-x-full");
+  });
+});
 
 //Lazy Loading Google Map Iframe
 const options = {

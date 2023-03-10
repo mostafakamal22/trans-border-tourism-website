@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html
+  class="scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent bg-slate-900"
+  lang="ar"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="description"
-      content="نحن نقدم لك باقة من خدمات السفر والسياحة حول العالم بافضل الاسعار وخدمة ممتازة"
+      name="title"
+      content="عبر الحدود للسياحة | إختيــار أفضــل للسفــر و السياحــة حــول العالــم"
     />
+    <meta
+      name="description"
+      content="نقدم لك باقة من خدمات السفر والسياحة حول العالم بأفضل الاسعار وخدمة ممتازة على مدار الساعة"
+    />
+    <meta
+      name="keywords"
+      content="السفر , السياحة, السفر الى الامارات, تأشيرة الامارت,السياحة  فى الامارات, السفر الى السعودية, تأشيرة السعودية,السياحة  فى السعودية,السفر الى امريكا, تأشيرة امريكا,السياحة  فى امريكا, الهجرة الى امريكا, تأشيرة كندا,العمرة ,الحج,العمرة والحج فى السعودية,تأشيرة العمرة والحج"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Arabic" />
+    <meta name="revisit-after" content="1 days" />
     <title>عبر الحدود للسياحة | العالم بين يديك</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,56 +41,75 @@
 
     <link
       rel="preload"
-      href="/dist/development.css"
+      href="/dist/build.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="/dist/development.css" /></noscript>
+    <noscript><link rel="stylesheet" href="/dist/build.css" /></noscript>
 
-    <script src="/scripts/index.js" defer></script>
+    <script src="/scripts/build.js" defer></script>
   </head>
   <body>
     <!-- Header Starts Here -->
     <header
       id="navbar"
-      class="fixed top-0 left-0 right-0 z-10 flex justify-between px-[5%] select-none transition-all duration-300 ease-in-out"
+      class="fixed top-0 left-0 right-0 z-[9999] flex justify-between px-[5%] select-none transition-all duration-500 ease-in-out"
     >
-      <a title="الرئيسية" href="#">
-        <img
-          class="max-w-[85px] w-24 h-[59px] my-4"
-          src="/img/logo.webp"
-          alt="Trans Border Tourism Logo"
-        />
-      </a>
-
       <!-- Desktop Navigation -->
       <nav
         aria-label="primary navigation"
         id="desktop-navigation"
-        class="hidden md:block"
+        class="hidden md:flex justify-center items-center fixed left-1 top-2 bottom-2"
       >
         <ul
-          class="h-full list-none flex items-center gap-2 text-lg font-semibold"
+          class="flex flex-col justify-center gap-4 backdrop-blur bg-black/30 px-1 py-2 rounded-lg shadow"
         >
           <li
-            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+            class="flex items-center justify-center p-1 border-b-2 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
           >
-            <a href="#">الرئيسية</a>
+            <a
+              class="flex flex-col justify-center items-center gap-1 text-xs font-bold max-w-[50px]"
+              title="خدماتنا"
+              href="#services"
+            >
+              <img
+                class="w-8 h-8"
+                src="/icons/nav/business-service.svg"
+                alt="Our Services"
+              />خدماتنا</a
+            >
           </li>
+
           <li
-            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+            class="flex items-center justify-center p-1 border-b-2 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
           >
-            <a href="#services">خدماتنا</a>
+            <a
+              class="flex flex-col justify-center items-center gap-1 text-xs font-bold max-w-[50px]"
+              title="من نحن"
+              href="#about"
+            >
+              <img
+                class="w-8 h-8"
+                src="/icons/nav/unknown-device.svg"
+                alt="About Us"
+              />من نحن</a
+            >
           </li>
+
           <li
-            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
+            class="flex items-center justify-center p-1 border-b-2 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
           >
-            <a href="#about">من نحن</a>
-          </li>
-          <li
-            class="flex items-center justify-center p-4 group border-b-4 border-transparent rounded hover:text-black hover:border-red-700 hover:bg-white transition-all duration-300 ease-in-out"
-          >
-            <a href="#contacts">تواصل معنا</a>
+            <a
+              class="flex flex-col justify-center items-center gap-1 text-xs font-bold max-w-[50px]"
+              title="تواصل معنا"
+              href="#contacts"
+            >
+              <img
+                class="w-8 h-8"
+                src="/icons/nav/the-internet.svg"
+                alt="Contact Us"
+              />تواصل معنا</a
+            >
           </li>
         </ul>
       </nav>
@@ -84,13 +118,13 @@
       <nav
         aria-label="secondary navigation"
         id="mobile-navigation"
-        class="absolute right-0 flex md:hidden flex-col items-end gap-5 px-4 py-10 w-60 h-screen bg-gradient-to-bl from-cyan-200 to-blue-500 text-black transition-all ease-in-out duration-200 translate-x-full shadow-lg"
+        class="absolute z-50 right-0 flex md:hidden flex-col items-end gap-5 px-4 py-5 w-60 h-screen bg-gradient-to-bl from-cyan-200 to-blue-500 text-stone-900 transition-all ease-in-out duration-200 translate-x-full shadow-lg"
       >
         <!-- Close Navbar Menu Button -->
-        <button title="Close Mobile Navigation" id="close">
+        <button title="Close Navigation" id="close">
           <img
-            class="w-[25px] h-[25px]"
-            src="/icons/square-xmark-solid.svg"
+            class="w-[30px] h-[30px] shadow rounded hover:opacity-95"
+            src="/icons/nav/square-xmark.svg"
             alt="close"
           />
         </button>
@@ -99,56 +133,45 @@
           class="w-full h-full list-none flex flex-col items-center gap-4 text-right text-lg font-semibold"
         >
           <li
-            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
-          >
-            <a
-              class="w-full flex flex-row-reverse items-center justify-between gap-2"
-              href="#"
-              title="Home Section"
-              >الرئيسية
-              <img class="w-7 h-7" src="/icons/house-solid.svg" alt="Home" />
-            </a>
-          </li>
-          <li
-            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+            class="nav-item w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
           >
             <a
               class="w-full flex flex-row-reverse items-center justify-between gap-2"
               href="#services"
-              title="Our Services"
+              title="خدماتنا"
               >خدماتنا
               <img
                 class="w-7 h-7"
-                src="/icons/earth-americas-solid.svg"
+                src="/icons/nav/earth-americas.svg"
                 alt="Our Services"
               />
             </a>
           </li>
           <li
-            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+            class="nav-item w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
           >
             <a
               class="w-full flex flex-row-reverse items-center justify-between gap-2"
               href="#about"
-              title="About Us"
+              title="من نحن"
               >من نحن
               <img
                 class="w-7 h-7"
-                src="/icons/circle-question-solid.svg"
+                src="/icons/nav/circle-question.svg"
                 alt="About Us"
             /></a>
           </li>
           <li
-            class="w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
+            class="nav-item w-full flex items-center justify-end p-2 hover:bg-red-500 focus:bg-red-500 rounded shadow"
           >
             <a
               class="w-full flex flex-row-reverse items-center justify-between gap-2"
               href="#contacts"
-              title="Contact Us"
+              title="معنا تواصل"
               >تواصل معنا
               <img
-                class="w-7 h-7"
-                src="/icons/square-phone-solid.svg"
+                class="w-8 h-8"
+                src="/icons/nav/customer-service.svg"
                 alt="Contact Us"
             /></a>
           </li>
@@ -156,8 +179,12 @@
       </nav>
 
       <!-- Open Navbar Menu Button -->
-      <button title="Open Mobile Navigation" id="open" class="block md:hidden">
-        <img class="w-[25px] h-[25px]" src="/icons/bars-solid.svg" alt="Open" />
+      <button
+        title="Open Navigation"
+        id="open"
+        class="block md:hidden mt-4 ml-auto backdrop-blur-md bg-red-200/30 p-1 rounded hover:opacity-90"
+      >
+        <img class="w-[25px] h-[25px]" src="/icons/nav/bars.svg" alt="Open" />
       </button>
     </header>
     <!-- Header End Here -->
@@ -167,240 +194,232 @@
       <!-- Hero Section Starts Here -->
       <section
         id="hero"
-        class="min-h-screen py-5 bg-no-repeat bg-center bg-cover hero-section flex flex-col justify-center items-center select-none"
+        class="min-h-screen px-3 py-10 hero-section flex flex-col justify-center items-center select-none"
       >
-        <header class="px-2">
+        <header
+          class="px-2 flex-grow basis-full flex flex-col justify-center items-center"
+        >
           <h1
-            class="my-5 py-1 text-5xl sm:text-6xl md:text-7xl font-extrabold text-transparent drop-shadow-lg bg-clip-text bg-gradient-to-r from-sky-50 to-slate-400"
+            class="mb-2 py-2 text-[clamp(3rem,3rem+2vw,6rem)] leading-tight font-extrabold drop-shadow-lg bg-clip-text fancy text-transparent bg-center bg-[110%_auto]"
           >
             عبـر الحـدود للسياحـة
           </h1>
-          <h2
-            class="mb-10 py-1 text-2xl sm:text-3xl md:text-5xl font-bold text-transparent drop-shadow-lg bg-clip-text bg-gradient-to-r from-sky-50 to-slate-400"
-          >
-            العالــم بين يديـك
-          </h2>
-          <p class="text-base sm:text-xl mb-5">
-            إختيــار أفضــل للسفــر والسياحــة حــول العالــم
+
+          <p class="text-base sm:text-xl mb-2">
+            إختيــار
+            <span
+              class="text-xl sm:text-2xl font-bold relative whitespace-nowrap after:content-[''] after:absolute after:right-0 after:left-0 after:-bottom-[.2rem] after:h-[.5rem] after:bg-[auto_100%] after:bg-repeat-round after:bg-[0em]"
+              >أفضــل</span
+            >
+            للسفــر و السياحــة حــول العالــم
           </p>
-          <button title="contact us" class="btn-primary">
-            <a href="#contacts"> ! تواصــل معنـا </a>
-          </button>
         </header>
+        <button title="تواصــل معنـا" class="btn-primary">
+          <a class="relative z-20 drop-shadow-lg" href="#contacts"
+            >تواصــل معنـا</a
+          >
+        </button>
       </section>
       <!-- Hero Section Ends Here -->
 
       <!-- Services Section Starts Here -->
-      <section id="services" class="relative py-20">
+      <section
+        id="services"
+        class="min-h-screen relative py-20 bg-gradient-to-b from-black to-cyan-900"
+      >
         <header class="flex flex-col justify-center items-center select-none">
           <h2
-            class="mb-10 py-1 text-5xl font-bold text-transparent drop-shadow-lg bg-clip-text bg-gradient-to-r from-red-700 to-blue-700 border-b-2 border-gray-400"
+            class="relative mb-10 py-1 text-5xl font-bold text-transparent bg-clip-text bg-[linear-gradient(305deg,tomato,gold,cyan)] after:content-[''] after:absolute after:right-0 after:left-0 after:-bottom-[.2rem] after:h-[.5rem] after:bg-[auto_100%] after:bg-repeat-round after:bg-[0em] wavy-text"
           >
             خـدماتنــا
           </h2>
-          <p class="text-xl px-2 font-semibold text-black">
-            نقـــدم لــك جميــع خدمـــات السفــر والسياحـــة
+          <p class="text-xl px-2 text-white">
+            نقدم لك باقة من خدمات السفر والسياحة حول العالم بأفضل الاسعار وخدمة
+            ممتازة على مدار الساعة
           </p>
         </header>
 
         <div
-          class="container my-8 p-2 mx-auto flex flex-wrap justify-center text-black"
+          class="container my-8 p-2 mx-auto flex flex-wrap justify-center text-white"
         >
           <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/27-globe.svg"
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/airplane.svg"
                   alt="Flights Tickets"
                   loading="lazy"
                 />
-                <h3 class="font-bold mb-2">تذاكر طيران</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
+                <h3 class="text-2xl">
+                  حجوزات <span class="font-bold">طيران</span>
+                </h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  يمكنك حجز تذاكر طيران لجميع الوجهات حول العالم
                 </p>
               </div>
             </div>
             <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/1713-downtown.svg"
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/hotel.svg"
                   alt="Hotels Reservations"
                   loading="lazy"
                 />
-                <h3 class="font-bold mb-2">حجز فنادق</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
-                </p>
-              </div>
-            </div>
-            <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
-            >
-              <div class="px-6 py-4">
-                <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/946-equity-security.svg"
-                  alt="Travel Security"
-                  loading="lazy"
-                />
-                <h3 class="font-bold mb-2">تأمين سفر</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
+                <h3 class="text-2xl">
+                  حجوزات <span class="font-bold">فنادق</span>
+                </h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  يمكنك الحجز المسبق للفنادق بكل سهولة
                 </p>
               </div>
             </div>
 
             <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/56-document.svg"
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/passport.svg"
                   alt="Visas"
                   loading="lazy"
                 />
-                <h3 class="font-bold mb-2">تأشيرات سياحية</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
+                <h3 class="text-2xl">
+                  تأشيرات <span class="font-bold">سياحية</span>
+                </h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  يمكنك حجز تأشيرات سياحية لجميع الوجهات حول العالم
                 </p>
               </div>
             </div>
 
             <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/1931-desert.svg"
-                  alt="Inner Tourism"
-                  loading="lazy"
-                />
-                <h3 class="font-bold mb-2">سياحة داخلية</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
-            >
-              <div class="px-6 py-4">
-                <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/1958-pyramids.svg"
-                  alt="Outter Tourism"
-                  loading="lazy"
-                />
-                <h3 class="font-bold mb-2">سياحة خارجية</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
-            >
-              <div class="px-6 py-4">
-                <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/1923-mosque.svg"
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/mosque.svg"
                   alt="Religious Tourism"
                   loading="lazy"
                 />
-                <h3 class="font-bold mb-2">- سياحة دينية - عمرة</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
+                <h3 class="text-2xl">
+                  سياحة <span class="font-bold">دينية</span>
+                </h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  يمكنك الان الحصول على تأشيرة المملكة العربية السعودية بكل
+                  سهولة, والإختيار من ضمن أفضل برامج العمرة (برى - طيران)
                 </p>
               </div>
             </div>
             <div
-              class="max-w-sm rounded overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto my-2 w-[200px] h-[200px]"
-                  src="/icons/475-rescue-safety-ring-help.svg"
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/holiday.svg"
                   alt="Holidays"
                   loading="lazy"
                 />
-                <h3 class="font-bold mb-2">هوليداي</h3>
-                <hr />
-                <p class="text-base mt-5">
-                  .حجز تذاكر طيران لجميع الوجهات حول العالم
+                <h3 class="text-2xl">
+                  أجازتك <span class="font-bold">عندنا</span>
+                </h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  إختر البرنامج السياحى المناسب لك ولأفراد عائلتك وتمتع بأفضل
+                  الوجهات السياحية حول العالم
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="max-w-sm backdrop-blur-sm bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
+            >
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
+                <img
+                  class="mx-auto my-2 w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/services/taxi.svg"
+                  alt="Outter Tourism"
+                  loading="lazy"
+                />
+                <h3 class="text-2xl">سيــارات</h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
+                  إتصل الان تصلك سيارتنا تصحبك من المطار إلى الفندق
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <button title="contact us" class="btn-primary">
-          <a href="#contacts"> ! تواصــل معنـا </a>
+        <button title="تواصــل معنـا" class="btn-primary">
+          <a class="relative z-20 drop-shadow-lg" href="#contacts"
+            >تواصــل معنـا</a
+          >
         </button>
       </section>
       <!-- Services Section Ends Here -->
 
       <!-- About Section Starts Here -->
-      <section id="about" class="relative py-20 bg-black">
-        <div class="custom-shape-divider-top-1672532270">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <rect x="1200" height="3.6"></rect>
-            <rect height="3.6"></rect>
-            <path
-              d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
+      <section
+        id="about"
+        class="min-h-screen relative py-20 bg-gradient-to-b from-cyan-900 to-black border-y-8 border-emerald-700 border-dashed"
+      >
         <header class="flex flex-col justify-center items-center select-none">
           <h2
-            class="mb-10 py-2 text-5xl font-bold text-transparent drop-shadow-lg bg-clip-text bg-gradient-to-r from-red-700 to-blue-700 border-b-2 border-gray-400"
+            class="relative mb-10 py-1 text-5xl font-bold text-transparent bg-clip-text bg-[linear-gradient(305deg,tomato,gold,cyan)] after:content-[''] after:absolute after:right-0 after:left-0 after:-bottom-[.5rem] after:h-[.5rem] after:bg-[auto_100%] after:bg-repeat-round after:bg-[0em] wavy-text"
           >
             مــن نحــن؟
           </h2>
-          <p class="max-w-2xl text-xl px-2 font-semibold">
+          <p class="max-w-2xl text-xl px-2">
             شركة عبر الحدود للسياحة وهي شركة خاصة تأسست عام 2015 مركزها في مدينة
             دبي تعمل في مجال السياحة والسفر وهي شركة مرخصة اصولا من وزارة
             السياحة بدولة الامارات العربيـة المتحدة
           </p>
         </header>
 
-        <div class="container my-8 p-4 mx-auto flex flex-wrap justify-center">
+        <div
+          class="container my-8 p-4 mx-auto flex flex-wrap justify-center text-white"
+        >
           <div class="grid sm:grid-cols-2 gap-4">
             <div
-              class="max-w-sm bg-gradient-to-bl from-red-400 bg-pink-600 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-lg bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto w-[200px] h-[200px]"
-                  src="/icons/243-glasses-eye-blink.svg"
+                  class="mx-auto w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/about/glasses-vision.svg"
                   alt="Our Vision"
                   loading="lazy"
                 />
-                <h3 class="text-xl font-bold mb-2">رؤيتنــا</h3>
-                <hr />
-                <p class="text-base mt-5">
+                <h3 class="text-2xl">رؤيتنــا</h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
                   أن تكون شركتنا هي الخيار الأول والأفضل للعملاء الراغبين في
                   الحصول علي جميع خدمات السفر والسياحه حول العالم من خلال
                   التواصل المباشر بمقر الشركه والتواصل الغير مباشر عبر الانترنت
@@ -410,18 +429,20 @@
             </div>
 
             <div
-              class="max-w-sm bg-gradient-to-bl from-red-400 bg-pink-600 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-[150ms]"
+              class="max-w-sm backdrop-blur-lg bg-cyan-200/30 rounded-lg overflow-hidden md:m-3 shadow-lg hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-center items-center gap-4 px-6 py-8"
+              >
                 <img
-                  class="mx-auto w-[200px] h-[200px]"
-                  src="/icons/1865-shooting-stars.svg"
+                  class="mx-auto w-[200px] h-[200px] drop-shadow-lg"
+                  src="/icons/about/target.svg"
                   alt="Our Goal"
                   loading="lazy"
                 />
-                <h3 class="text-xl font-bold mb-2">هدفنـــا</h3>
-                <hr />
-                <p class="text-base mt-5">
+                <h3 class="text-2xl">هدفنـــا</h3>
+                <hr class="w-full" />
+                <p class="text-base p-4">
                   السعي جاهدين دائماً نحو تقديم افضل خدمة متميزه و نبذل قصاري
                   جهدنا في تطوير الخدمات السياحية بدولة الامارات العربيه المتحده
                   داخلها وخارجها
@@ -431,74 +452,56 @@
           </div>
         </div>
 
-        <button title="contact us" class="btn-primary">
-          <a href="#contacts"> ! تواصــل معنـا </a>
-        </button>
-
-        <div class="custom-shape-divider-bottom-1672532431">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
+        <button title="تواصــل معنـا" class="btn-primary">
+          <a class="relative z-20 drop-shadow-lg" href="#contacts"
+            >تواصــل معنـا</a
           >
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
+        </button>
       </section>
       <!-- About Section Ends Here -->
 
       <!-- Contacts Section Starts Here -->
-      <section id="contacts" class="py-20">
+      <section
+        id="contacts"
+        class="min-h-screen py-20 bg-gradient-to-b from-black to-cyan-900"
+      >
         <header class="flex flex-col justify-center items-center select-none">
           <h2
-            class="mb-10 py-2 text-5xl font-bold text-transparent drop-shadow-lg bg-clip-text bg-gradient-to-r from-red-700 to-blue-700 border-b-2 border-gray-400"
+            class="relative mb-10 py-1 text-5xl font-bold text-transparent bg-clip-text bg-[linear-gradient(305deg,tomato,gold,cyan)] after:content-[''] after:absolute after:right-0 after:left-0 after:-bottom-[.5rem] after:h-[.5rem] after:bg-[auto_100%] after:bg-repeat-round after:bg-[0em] wavy-text"
           >
-            ! تواصــل معنـا
+            تواصــل معنـا
           </h2>
-          <p class="max-w-2xl px-2 font-semibold text-black">
-            للتواصل والاستفسار عبر جميــع وسائــل التواصــل
+          <p class="max-w-2xl px-2 font-semibold text-white">
+            إبق على تواصل معنا للإطلاع على أحدث العروض ومعرفة جميع أخبارنا
           </p>
         </header>
 
         <div
-          class="container my-8 p-4 mx-auto flex flex-wrap justify-center text-black"
+          class="container my-8 p-4 mx-auto flex flex-wrap justify-center text-white"
         >
-          <div class="grid content-center sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="grid content-center sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div
-              class="max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg border"
+              class="self-start px-6 py-8 max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg backdrop-blur-lg bg-cyan-200/30 hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div class="flex flex-col justify-between items-center gap-4">
                 <img
                   class="mx-auto my-2 w-[180px] h-[180px]"
-                  src="/icons/58-call-phone.svg"
-                  alt="Contacts"
+                  src="/icons/contacts/telephone-technology.svg"
+                  alt="البريــد الالكترونــى والموبايل"
                   loading="lazy"
                 />
-                <h3 class="text-xl font-bold mb-2">
-                  البريــد الالكترونــى والموبايل
+                <h3 class="text-2xl">
+                  البريــد الالكترونــى
+                  <span class="font-bold"> والموبايل </span>
                 </h3>
-                <hr />
+                <hr class="w-full" />
                 <ul
-                  class="flex flex-col justify-center items-center flex-wrap gap-2 text-base my-20 font-semibold"
+                  class="w-full flex flex-col justify-start items-center flex-wrap gap-2 text-base font-semibold"
                 >
-                  <li class="w-full flex items-center gap-8">
+                  <li class="w-full flex items-center gap-4">
                     <img
                       class="w-[25px] h-[25px]"
-                      src="/icons/envelope-solid.svg"
+                      src="/icons/contacts/mail-email.svg"
                       alt="mail"
                       loading="lazy"
                     />
@@ -506,10 +509,10 @@
                       >Info@tbtourism.com</a
                     >
                   </li>
-                  <li class="w-full flex items-center gap-8">
+                  <li class="w-full flex items-center gap-4">
                     <img
                       class="w-[25px] h-[25px]"
-                      src="/icons/mobile-solid.svg"
+                      src="/icons/contacts/mobile-phone.svg"
                       alt="mail"
                       loading="lazy"
                     />
@@ -517,20 +520,20 @@
                       >9715123456789</a
                     >
                   </li>
-                  <li class="w-full flex items-center gap-8">
+                  <li class="w-full flex items-center gap-4">
                     <img
                       class="w-[25px] h-[25px]"
-                      src="/icons/mobile-solid.svg"
+                      src="/icons/contacts/mobile-phone.svg"
                       alt="mail"
                       loading="lazy"
                     />
                     <a href="tel:971412345678" title="Call Us">971412345678</a>
                   </li>
 
-                  <li class="w-full flex items-center gap-8">
+                  <li class="w-full flex items-center gap-4">
                     <img
-                      class="w-[25px] h-[25px]"
-                      src="/icons/phone-solid.svg"
+                      class="w-[30px] h-[30px] -ml-[2px]"
+                      src="/icons/contacts/telephone-mobile-phone.svg"
                       alt="mail"
                       loading="lazy"
                     />
@@ -543,19 +546,21 @@
             </div>
 
             <div
-              class="max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg border"
+              class="self-start px-6 py-8 max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg backdrop-blur-lg bg-cyan-200/30 hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div class="flex flex-col justify-between items-center gap-4">
                 <img
                   class="mx-auto my-2 w-[180px] h-[180px]"
-                  src="/icons/47-chat.svg"
-                  alt="Social Media"
+                  src="/icons/contacts/chat-communication.svg"
+                  alt="السوشيال ميديــا"
                   loading="lazy"
                 />
-                <h3 class="text-xl font-bold mb-2">السوشيال ميديــا</h3>
-                <hr />
+                <h3 class="text-2xl">
+                  وسائل <span class="font-bold"> التواصل الإجتماعى</span>
+                </h3>
+                <hr class="w-full" />
                 <ul
-                  class="flex justify-center items-center flex-wrap gap-4 text-base my-20 font-semibold"
+                  class="flex justify-center items-center flex-wrap gap-4 text-base font-semibold"
                 >
                   <li>
                     <a
@@ -564,8 +569,8 @@
                       title="Facebook Page"
                     >
                       <img
-                        class="w-[50px] h-[50px] hover:opacity-90"
-                        src="/icons/square-facebook.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/square-facebook.svg"
                         alt="Facebook"
                         loading="lazy"
                       />
@@ -579,8 +584,8 @@
                       title="Instagram Page"
                     >
                       <img
-                        class="w-[50px] h-[50px] hover:opacity-90"
-                        src="/icons/square-instagram.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/square-instagram.svg"
                         alt="Instagram"
                         loading="lazy"
                       />
@@ -594,8 +599,8 @@
                       title="Tiktok Page"
                     >
                       <img
-                        class="w-[45px] h-[45px] hover:opacity-90"
-                        src="/icons/tiktok.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/tiktok.svg"
                         alt="Tiktok"
                         loading="lazy"
                       />
@@ -609,8 +614,8 @@
                       title="Whatsapp"
                     >
                       <img
-                        class="w-[50px] h-[50px] hover:opacity-90"
-                        src="/icons/square-whatsapp.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/square-whatsapp.svg"
                         alt="Whatsapp"
                         loading="lazy"
                       />
@@ -623,8 +628,8 @@
                       title="Whatsapp"
                     >
                       <img
-                        class="w-[50px] h-[50px] hover:opacity-90"
-                        src="/icons/square-whatsapp.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/square-whatsapp.svg"
                         alt="Whatsapp"
                         loading="lazy"
                       />
@@ -637,8 +642,8 @@
                       title="Whatsapp"
                     >
                       <img
-                        class="w-[50px] h-[50px] hover:opacity-90"
-                        src="/icons/square-whatsapp.svg"
+                        class="w-[50px] h-[50px] hover:opacity-95 p-2 bg-slate-50 rounded-md shadow-lg"
+                        src="/icons/socials/square-whatsapp.svg"
                         alt="Whatsapp"
                         loading="lazy"
                       />
@@ -649,20 +654,20 @@
             </div>
 
             <div
-              class="max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg border"
+              class="px-6 py-4 flext justify-center items-center max-w-sm min-w-[18rem] rounded overflow-hidden md:m-3 shadow-lg backdrop-blur-lg bg-cyan-200/30 hover:scale-105 transition-all ease-in-out duration-300"
             >
-              <div class="px-6 py-4">
+              <div
+                class="flex flex-col justify-between items-center gap-4 md:mt-3"
+              >
                 <img
                   class="mx-auto my-2 w-[180px] h-[180px]"
-                  src="/icons/42-search.svg"
-                  alt="Address"
+                  src="/icons/contacts/placeholder-signs.svg"
+                  alt="العنــوان"
                   loading="lazy"
                 />
-                <h3 class="text-xl font-bold mb-2">العنــوان</h3>
-                <hr />
-                <p class="text-base my-10 font-semibold">
-                  DUBAI - UNITED ARAB EMIRATES
-                </p>
+                <h3 class="text-2xl">العنــوان</h3>
+                <hr class="w-full" />
+                <p class="text-base">DUBAI - UNITED ARAB EMIRATES</p>
                 <iframe
                   title="Trans Border Tourism Address"
                   loading="lazy"
@@ -693,7 +698,9 @@
     <!-- Main Content Ends Here -->
 
     <!-- Footer Starts Here -->
-    <footer class="p-4 md:px-10 md:pt-20">
+    <footer
+      class="p-4 md:px-10 md:pt-20 border-dashed border-t-emerald-700 border-t-8"
+    >
       <div
         class="max-w-[1440px] flex items-center justify-between flex-wrap gap-4"
       >
@@ -701,6 +708,7 @@
           src="/img/logo.webp"
           class="max-w-[85px] w-24 h-[59px] mx-auto sm:mx-0"
           alt="Trans Border Tourism Logo"
+          loading="lazy"
         />
 
         <span
@@ -743,7 +751,7 @@
       ></span>
       <span class="block text-sm"
         >© 2023
-        <a href="https://flowbite.com/" class="hover:underline"
+        <a href="https://tbtourism.com/" class="hover:underline"
           >Trans Border Tourism™</a
         >. All Rights Reserved.
       </span>
